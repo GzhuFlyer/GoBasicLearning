@@ -788,6 +788,47 @@ func test29()  {
 		fmt.Println(i)
 	}
 }
+func fibonacci2(c,quit chan int)  {
+	x,y := 1,1
+	for{
+		select {
+		case c <- x:
+			x,y = y, x+y
+			case <- quit:
+			fmt.Println("quit")
+				return
+		}
+	}
+}
+func test30()  {
+	c := make(chan int)
+	quit := make(chan int)
+	go func() {
+		for i:=0; i<10; i++ {
+			fmt.Println(<-c)
+		}
+		quit <- 0
+	}()
+	fibonacci2(c,quit)
+}
+/*
+	小结：
+	var和const参考2.2Go语言基础里面的变量和常量申明
+	package和import已经有过短暂的接触
+	func 用于定义函数和方法
+	return 用于从函数返回
+	defer 用于类似析构函数
+	go 用于并行
+	select 用于选择不同类型的通讯
+	interface 用于定义接口，参考2.6小节
+	struct 用于定义抽象数据类型，参考2.5小节
+	break、case、continue、for、fallthrough、else、if、switch、goto、default这些参考2.3流程介绍里面
+	chan用于channel通讯
+	type用于声明自定义类型
+	map用于声明map类型数据
+	range用于读取slice、map、channel数据
+*/
+
 func main() {
 	fmt.Println("hello world")
 	test1();test2();test3();test4();test5()
