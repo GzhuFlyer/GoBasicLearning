@@ -842,4 +842,6 @@ func main() {
 	go test27("world")	//开一个新的Goroutines执行
 	test27("hello")	//当前Goroutines执行
 	test28();test29()
+
+	
 }
