@@ -1,8 +1,11 @@
 package main
 
 import (
+	"bufio"
 	"crypto/sha256"
 	. "fmt"
+	"os"
+	"time"
 	"unicode/utf8"
 )
 
@@ -11,8 +14,11 @@ func main() {
 	//array_test()
 	//sha_test()
 	//slice_test()
-	map_test()
+	//map_test()
+	//dedup()
+	struct_test()
 }
+
 
 func string_test()  {
 	s := "Hello, 世界"
@@ -128,9 +134,9 @@ func map_test()  {
 	//查找ages里面是否有键为“bob”的值，有的话ok为1
 	if age,ok := ages["bob"]; ok{Printf("bob %v\n",age)}
 	if age,ok := ages["frank"]; ok{Printf("frank %v\n",age)}
-	println(equal(map[string]int{"A":0}, map[string]int{"B":42}))
-	println(equal(map[string]int{"A":0}, map[string]int{"A":42}))
-	println(equal(map[string]int{"A":0}, map[string]int{"A":0}))
+	println(equal(map[string]int{"A":0}, map[string]int{"B":42}))	//false
+	println(equal(map[string]int{"A":0}, map[string]int{"A":42}))	//false
+	println(equal(map[string]int{"A":0}, map[string]int{"A":0}))	//true
 }
 
 func equal(x,y map[string]int) bool {
@@ -144,4 +150,35 @@ func equal(x,y map[string]int) bool {
 		}
 	}
 	return true
+}
+
+func dedup()  {
+	seen := make(map[string]bool)	//字符串集合
+	input := bufio.NewScanner(os.Stdin)
+	for input.Scan(){
+		line := input.Text()
+		if !seen[line]{
+			seen[line] = true
+			Println(line)
+		}
+	}
+	//page74-76未编码
+}
+
+func struct_test()  {
+	type Employee struct {
+		ID			int
+		Name 		string
+		Address	 	string
+		DoB 		time.Time
+		Position 	string
+		Salary		int
+		ManagerID	int
+	}
+	var dilbert Employee
+	dilbert.Salary -= 5000
+	position := &dilbert.Position
+	*position = "Senior" + *position	//通过指针访问
+	var employeeOfTheMonth *Employee = &dilbert
+	employeeOfTheMonth.Position += " (proactive team player)"
 }
