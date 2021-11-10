@@ -2,7 +2,10 @@ package main
 
 import (
 	"crypto/sha256"
+	"encoding/json"
 	. "fmt"
+	"log"
+	"time"
 	"unicode/utf8"
 )
 
@@ -11,7 +14,9 @@ func main() {
 	//array_test()
 	//sha_test()
 	//slice_test()
-	map_test()
+	//map_test()
+	//test_struct()
+	test_json()
 }
 
 func string_test()  {
@@ -144,4 +149,89 @@ func equal(x,y map[string]int) bool {
 		}
 	}
 	return true
+}
+
+type Employee struct {
+	ID			int
+	Name  		string
+	Address 	string
+	DoB			time.Time
+	Position 	string
+	Salary		int
+	ManagerID	int
+}
+func test_struct()  {
+	var dilbert Employee
+	dilbert.Salary -= 5000
+	position := &dilbert.Position
+	*position = "Senior " + *position
+	var employeeOfTheMonth *Employee = &dilbert
+	employeeOfTheMonth.Position += " (proactive team player)"
+	Println(EmployeeById(dilbert.ManagerID).Position)
+	type Point struct {
+		X,Y int
+	}
+	p := Point{1,2}	//结构体可以进行比较
+	q := Point{2,1}
+	k := Point{1,2}
+	Println(p.X == q.X)
+	Println(p == q)
+	Println(p == k)
+
+	type address struct {
+		hostname string
+		port 	 int
+	}
+	hits := make(map[address]int)	//结构体作为map的键
+	hits[address{"golang.org",443}]++
+	Printf("hits=%v\n",hits)
+
+	type Circle struct {
+		Point	//匿名成员
+		Radius int
+	}
+	type Wheel struct {
+		Circle
+		Spokes	int
+	}
+	w := Wheel{Circle{Point{8,8},5},20}
+	Printf("%#v\n",w)
+}
+
+func EmployeeById(id int) *Employee {
+	return &Employee{
+		Position:  "boss",
+		Salary:  10000,
+	}
+}
+
+func test_json()  {
+	type Movie struct {
+		Title 	string
+		Year	int `json:"released"`
+		Color 	bool `json:"color,omitempty"`
+		Actors	[]string
+	}
+	var movies = []Movie{
+		{Title: "Casablanca",Year: 1932,Actors: []string{"Humphrey","Bob"}},
+		{Title: "Cool",Year: 1832,Color: true,Actors: []string{"Paul"}},
+	}
+	Printf("movies=%#v\n",movies)
+	//marshal go结构体转JSON
+	data,err := json.Marshal(movies)
+	if err != nil{
+		log.Fatalf("JSON marshaling failed: %s",err)
+	}
+	Printf("%s\n",data)
+	//json格式化输出
+	data1,err := json.MarshalIndent(movies,""," ")
+	if err != nil{
+		log.Fatalf("JSON marshaling failed: %s",err)
+	}
+	Printf("%s\n",data1)
+}
+
+const IssuesURL = "https://api.github.com/search/issues"
+type IssuesSearchResullt struct {
+	TotalCount int
 }
