@@ -1,0 +1,27 @@
+======没有创建price索引
+连接数据库库成功
+now time is: 2021-12-13 00:58:59.0949083 +0800 CST m=+0.020591101
+query data using time is :398.9811ms
+连接数据库库成功
+now time is: 2021-12-13 00:59:12.0928574 +0800 CST m=+0.024841001
+query data using time is :352.1798ms
+连接数据库库成功
+now time is: 2021-12-13 00:59:22.3776796 +0800 CST m=+0.022354501
+query data using time is :330.3485ms
+
+
+======创建price索引(primary)连接数据库库成功连接数据库库成功
+now time is: 2021-12-13 01:18:11.5550509 +0800 CST m=+0.029511901
+query data using time is :435.211ms
+连接数据库库成功
+now time is: 2021-12-13 01:18:27.0293384 +0800 CST m=+0.019128801
+query data using time is :376.1931ms
+连接数据库库成功
+now time is: 2021-12-13 01:18:52.4589589 +0800 CST m=+0.016104201
+query data using time is :328.7122ms
+连接数据库库成功
+now time is: 2021-12-13 01:19:36.2134585 +0800 CST m=+0.017881401
+query data using time is :328.6326ms
+连接数据库库成功
+now time is: 2021-12-13 01:20:06.1773205 +0800 CST m=+0.016002701
+query data using time is :320.8754ms
