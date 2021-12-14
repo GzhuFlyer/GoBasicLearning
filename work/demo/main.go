@@ -81,34 +81,12 @@ func base() {
 	var z *string = nil
 	//var z string = nil//error
 	var y error = nil
-<<<<<<< Updated upstream
-	fmt.Printf("x = %v, y= %v,z=%v\n",x,y,z)
+	fmt.Printf("x = %v, y= %v,z=%v\n", x, y, z)
 	//s := make(int)
 	//fmt.Println(s)
 }
 
-func main()  {
-=======
-	fmt.Printf("x = %v, y= %v,z=%v\n", x, y, z)
-	//s := make(int) //error
-	//s := make([]int, 4, 14)
-	s := make([]int, 0)
-	fmt.Println(cap(s), len(s))
-	u := []int{1, 2, 3}
-	v := []int{
-		1, 2, 3,
-		4, 5, 6}
-	k := 1
-	//q := k++ //error
-	//++k  //error
-	k++
-	fmt.Println(u, v, k)
-
-	//var slice = [4]byte{'a', 'b', 'c', 'd'}
-	//Slice.Remove(slice)
-}
 func main() {
->>>>>>> Stashed changes
 	//fmt.Println(test1(1,2,3,4))
 	//fmt.Println(test1([]int{1,2,3}...))
 	//defertest2()
