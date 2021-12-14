@@ -68,9 +68,10 @@ func base()  {
 	//var z string = nil//error
 	var y error = nil
 	fmt.Printf("x = %v, y= %v,z=%v\n",x,y,z)
-	s := make(int)
-	fmt.Println(s)
+	//s := make(int)
+	//fmt.Println(s)
 }
+
 func main()  {
 	//fmt.Println(test1(1,2,3,4))
 	//fmt.Println(test1([]int{1,2,3}...))
