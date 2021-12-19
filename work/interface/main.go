@@ -38,6 +38,10 @@ func main() {
 	for _, animal := range animals {
 		fmt.Println(animal.Speak())
 	}
+	var i Animal
+	i = Dog{}
+	i.Speak()
+
 }
 
 //package main

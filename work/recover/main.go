@@ -1,5 +1,6 @@
 package main
 
+<<<<<<< Updated upstream
 import (
 	"fmt"
 	"runtime"
@@ -37,4 +38,10 @@ func main() {
 		fmt.Println("赋值宕机后")
 	})
 	fmt.Println("运行后")
+=======
+import "fmt"
+
+func main() {
+	fmt.Printf("hello")
+>>>>>>> Stashed changes
 }
