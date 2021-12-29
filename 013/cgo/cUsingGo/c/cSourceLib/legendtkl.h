@@ -1,2 +1,0 @@
-int Foo();
-int Bar();
