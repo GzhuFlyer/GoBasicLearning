@@ -1,0 +1,755 @@
+"".main STEXT size=946 args=0x0 locals=0x98 funcid=0x0
+	0x0000 00000 (main.go:9)	TEXT	"".main(SB), ABIInternal, $152-0
+	0x0000 00000 (main.go:9)	MOVQ	TLS, CX
+	0x0009 00009 (main.go:9)	PCDATA	$0, $-2
+	0x0009 00009 (main.go:9)	MOVQ	(CX)(TLS*2), CX
+	0x0010 00016 (main.go:9)	PCDATA	$0, $-1
+	0x0010 00016 (main.go:9)	LEAQ	-24(SP), AX
+	0x0015 00021 (main.go:9)	CMPQ	AX, 16(CX)
+	0x0019 00025 (main.go:9)	PCDATA	$0, $-2
+	0x0019 00025 (main.go:9)	JLS	936
+	0x001f 00031 (main.go:9)	PCDATA	$0, $-1
+	0x001f 00031 (main.go:9)	SUBQ	$152, SP
+	0x0026 00038 (main.go:9)	MOVQ	BP, 144(SP)
+	0x002e 00046 (main.go:9)	LEAQ	144(SP), BP
+	0x0036 00054 (main.go:9)	FUNCDATA	$0, gclocals·69c1753bd5f81501d95132d08af04464(SB)
+	0x0036 00054 (main.go:9)	FUNCDATA	$1, gclocals·ac9d8af61b7ff1aaea08838d74b64836(SB)
+	0x0036 00054 (main.go:9)	FUNCDATA	$2, "".main.stkobj(SB)
+	0x0036 00054 (main.go:10)	LEAQ	type.string(SB), AX
+	0x003d 00061 (main.go:10)	MOVQ	AX, (SP)
+	0x0041 00065 (main.go:10)	MOVQ	$1, 8(SP)
+	0x004a 00074 (main.go:10)	MOVQ	$2, 16(SP)
+	0x0053 00083 (main.go:10)	PCDATA	$1, $0
+	0x0053 00083 (main.go:10)	CALL	runtime.makeslice(SB)
+	0x0058 00088 (main.go:10)	MOVQ	24(SP), DI
+	0x005d 00093 (main.go:10)	MOVQ	DI, "".s2+120(SP)
+	0x0062 00098 (main.go:10)	MOVQ	$1, "".s2+128(SP)
+	0x006e 00110 (main.go:10)	MOVQ	$2, "".s2+136(SP)
+	0x007a 00122 (main.go:11)	MOVQ	$1, 8(DI)
+	0x0082 00130 (main.go:11)	PCDATA	$0, $-2
+	0x0082 00130 (main.go:11)	CMPL	runtime.writeBarrier(SB), $0
+	0x0089 00137 (main.go:11)	JNE	901
+	0x008f 00143 (main.go:11)	LEAQ	go.string."1"(SB), DX
+	0x0096 00150 (main.go:11)	MOVQ	DX, (DI)
+	0x0099 00153 (main.go:12)	PCDATA	$0, $-1
+	0x0099 00153 (main.go:12)	MOVQ	"".s2+128(SP), DX
+	0x00a1 00161 (main.go:12)	MOVQ	"".s2+136(SP), BX
+	0x00a9 00169 (main.go:12)	MOVQ	"".s2+120(SP), SI
+	0x00ae 00174 (<unknown line number>)	NOP
+	0x00ae 00174 (main.go:26)	LEAQ	1(DX), R8
+	0x00b2 00178 (main.go:26)	CMPQ	R8, BX
+	0x00b5 00181 (main.go:26)	JHI	827
+	0x00bb 00187 (main.go:26)	SHLQ	$4, DX
+	0x00bf 00191 (main.go:26)	MOVQ	$1, 8(SI)(DX*1)
+	0x00c8 00200 (main.go:26)	LEAQ	(SI)(DX*1), DI
+	0x00cc 00204 (main.go:26)	PCDATA	$0, $-2
+	0x00cc 00204 (main.go:26)	CMPL	runtime.writeBarrier(SB), $0
+	0x00d3 00211 (main.go:26)	JNE	810
+	0x00d9 00217 (main.go:26)	LEAQ	go.string."3"(SB), R9
+	0x00e0 00224 (main.go:26)	MOVQ	R9, (SI)(DX*1)
+	0x00e4 00228 (main.go:27)	PCDATA	$0, $-1
+	0x00e4 00228 (main.go:27)	TESTQ	R8, R8
+	0x00e7 00231 (main.go:27)	JLS	925
+	0x00ed 00237 (main.go:27)	MOVQ	$1, 8(SI)
+	0x00f5 00245 (main.go:27)	PCDATA	$0, $-2
+	0x00f5 00245 (main.go:27)	CMPL	runtime.writeBarrier(SB), $0
+	0x00fc 00252 (main.go:27)	NOP
+	0x0100 00256 (main.go:27)	JNE	786
+	0x0106 00262 (main.go:27)	LEAQ	go.string."2"(SB), AX
+	0x010d 00269 (main.go:27)	MOVQ	AX, (SI)
+	0x0110 00272 (main.go:13)	PCDATA	$0, $-1
+	0x0110 00272 (main.go:13)	MOVQ	SI, (SP)
+	0x0114 00276 (main.go:13)	MOVQ	R8, 8(SP)
+	0x0119 00281 (main.go:13)	MOVQ	BX, 16(SP)
+	0x011e 00286 (main.go:13)	PCDATA	$1, $1
+	0x011e 00286 (main.go:13)	NOP
+	0x0120 00288 (main.go:13)	CALL	runtime.convTslice(SB)
+	0x0125 00293 (main.go:13)	MOVQ	24(SP), AX
+	0x012a 00298 (main.go:13)	XORPS	X0, X0
+	0x012d 00301 (main.go:13)	MOVUPS	X0, ""..autotmp_26+104(SP)
+	0x0132 00306 (main.go:13)	LEAQ	type.[]string(SB), CX
+	0x0139 00313 (main.go:13)	MOVQ	CX, ""..autotmp_26+104(SP)
+	0x013e 00318 (main.go:13)	MOVQ	AX, ""..autotmp_26+112(SP)
+	0x0143 00323 (<unknown line number>)	NOP
+	0x0143 00323 ($GOROOT\src\fmt\print.go:274)	MOVQ	os.Stdout(SB), AX
+	0x014a 00330 ($GOROOT\src\fmt\print.go:274)	LEAQ	go.itab.*os.File,io.Writer(SB), DX
+	0x0151 00337 ($GOROOT\src\fmt\print.go:274)	MOVQ	DX, (SP)
+	0x0155 00341 ($GOROOT\src\fmt\print.go:274)	MOVQ	AX, 8(SP)
+	0x015a 00346 ($GOROOT\src\fmt\print.go:274)	LEAQ	""..autotmp_26+104(SP), AX
+	0x015f 00351 ($GOROOT\src\fmt\print.go:274)	MOVQ	AX, 16(SP)
+	0x0164 00356 ($GOROOT\src\fmt\print.go:274)	MOVQ	$1, 24(SP)
+	0x016d 00365 ($GOROOT\src\fmt\print.go:274)	MOVQ	$1, 32(SP)
+	0x0176 00374 ($GOROOT\src\fmt\print.go:274)	CALL	fmt.Fprintln(SB)
+	0x017b 00379 (main.go:16)	XCHGL	AX, AX
+	0x017c 00380 (main.go:22)	MOVQ	"".s2+128(SP), AX
+	0x0184 00388 (main.go:22)	LEAQ	1(AX), CX
+	0x0188 00392 (main.go:22)	MOVQ	"".s2+120(SP), DX
+	0x018d 00397 (main.go:22)	MOVQ	"".s2+136(SP), BX
+	0x0195 00405 (main.go:22)	CMPQ	CX, BX
+	0x0198 00408 (main.go:22)	JHI	717
+	0x019e 00414 (main.go:22)	LEAQ	1(AX), BX
+	0x01a2 00418 (main.go:22)	MOVQ	BX, "".s2+128(SP)
+	0x01aa 00426 (main.go:22)	SHLQ	$4, AX
+	0x01ae 00430 (main.go:22)	MOVQ	$1, 8(DX)(AX*1)
+	0x01b7 00439 (main.go:22)	LEAQ	(DX)(AX*1), DI
+	0x01bb 00443 (main.go:22)	PCDATA	$0, $-2
+	0x01bb 00443 (main.go:22)	CMPL	runtime.writeBarrier(SB), $0
+	0x01c2 00450 (main.go:22)	JNE	700
+	0x01c8 00456 (main.go:22)	LEAQ	go.string."3"(SB), BX
+	0x01cf 00463 (main.go:22)	MOVQ	BX, (DX)(AX*1)
+	0x01d3 00467 (main.go:23)	PCDATA	$0, $-1
+	0x01d3 00467 (main.go:23)	MOVQ	"".s2+120(SP), DI
+	0x01d8 00472 (main.go:23)	MOVQ	"".s2+128(SP), CX
+	0x01e0 00480 (main.go:23)	TESTQ	CX, CX
+	0x01e3 00483 (main.go:23)	JLS	918
+	0x01e9 00489 (main.go:23)	MOVQ	$1, 8(DI)
+	0x01f1 00497 (main.go:23)	PCDATA	$0, $-2
+	0x01f1 00497 (main.go:23)	CMPL	runtime.writeBarrier(SB), $0
+	0x01f8 00504 (main.go:23)	JNE	683
+	0x01fe 00510 (main.go:23)	LEAQ	go.string."2"(SB), AX
+	0x0205 00517 (main.go:23)	MOVQ	AX, (DI)
+	0x0208 00520 (main.go:18)	PCDATA	$0, $-1
+	0x0208 00520 (main.go:18)	MOVQ	"".s2+120(SP), AX
+	0x020d 00525 (main.go:18)	MOVQ	"".s2+128(SP), CX
+	0x0215 00533 (main.go:18)	MOVQ	"".s2+136(SP), DX
+	0x021d 00541 (main.go:18)	MOVQ	AX, (SP)
+	0x0221 00545 (main.go:18)	MOVQ	CX, 8(SP)
+	0x0226 00550 (main.go:18)	MOVQ	DX, 16(SP)
+	0x022b 00555 (main.go:18)	PCDATA	$1, $0
+	0x022b 00555 (main.go:18)	CALL	runtime.convTslice(SB)
+	0x0230 00560 (main.go:18)	MOVQ	24(SP), AX
+	0x0235 00565 (main.go:18)	XORPS	X0, X0
+	0x0238 00568 (main.go:18)	MOVUPS	X0, ""..autotmp_32+88(SP)
+	0x023d 00573 (main.go:18)	LEAQ	type.[]string(SB), CX
+	0x0244 00580 (main.go:18)	MOVQ	CX, ""..autotmp_32+88(SP)
+	0x0249 00585 (main.go:18)	MOVQ	AX, ""..autotmp_32+96(SP)
+	0x024e 00590 (<unknown line number>)	NOP
+	0x024e 00590 ($GOROOT\src\fmt\print.go:213)	MOVQ	os.Stdout(SB), AX
+	0x0255 00597 ($GOROOT\src\fmt\print.go:213)	LEAQ	go.itab.*os.File,io.Writer(SB), CX
+	0x025c 00604 ($GOROOT\src\fmt\print.go:213)	MOVQ	CX, (SP)
+	0x0260 00608 ($GOROOT\src\fmt\print.go:213)	MOVQ	AX, 8(SP)
+	0x0265 00613 ($GOROOT\src\fmt\print.go:213)	LEAQ	go.string."s2=%v\n"(SB), AX
+	0x026c 00620 ($GOROOT\src\fmt\print.go:213)	MOVQ	AX, 16(SP)
+	0x0271 00625 ($GOROOT\src\fmt\print.go:213)	MOVQ	$6, 24(SP)
+	0x027a 00634 ($GOROOT\src\fmt\print.go:213)	LEAQ	""..autotmp_32+88(SP), AX
+	0x027f 00639 ($GOROOT\src\fmt\print.go:213)	MOVQ	AX, 32(SP)
+	0x0284 00644 ($GOROOT\src\fmt\print.go:213)	MOVQ	$1, 40(SP)
+	0x028d 00653 ($GOROOT\src\fmt\print.go:213)	MOVQ	$1, 48(SP)
+	0x0296 00662 ($GOROOT\src\fmt\print.go:213)	CALL	fmt.Fprintf(SB)
+	0x029b 00667 (main.go:18)	MOVQ	144(SP), BP
+	0x02a3 00675 (main.go:18)	ADDQ	$152, SP
+	0x02aa 00682 (main.go:18)	RET
+	0x02ab 00683 (main.go:23)	PCDATA	$0, $-2
+	0x02ab 00683 (main.go:23)	LEAQ	go.string."2"(SB), AX
+	0x02b2 00690 (main.go:23)	CALL	runtime.gcWriteBarrier(SB)
+	0x02b7 00695 (main.go:23)	JMP	520
+	0x02bc 00700 (main.go:22)	LEAQ	go.string."3"(SB), DX
+	0x02c3 00707 (main.go:22)	CALL	runtime.gcWriteBarrierDX(SB)
+	0x02c8 00712 (main.go:22)	JMP	467
+	0x02cd 00717 (main.go:22)	PCDATA	$0, $-1
+	0x02cd 00717 (main.go:22)	LEAQ	type.string(SB), SI
+	0x02d4 00724 (main.go:22)	MOVQ	SI, (SP)
+	0x02d8 00728 (main.go:22)	MOVQ	DX, 8(SP)
+	0x02dd 00733 (main.go:22)	MOVQ	AX, 16(SP)
+	0x02e2 00738 (main.go:22)	MOVQ	BX, 24(SP)
+	0x02e7 00743 (main.go:22)	MOVQ	CX, 32(SP)
+	0x02ec 00748 (main.go:22)	PCDATA	$1, $1
+	0x02ec 00748 (main.go:22)	CALL	runtime.growslice(SB)
+	0x02f1 00753 (main.go:22)	MOVQ	40(SP), DX
+	0x02f6 00758 (main.go:22)	MOVQ	48(SP), AX
+	0x02fb 00763 (main.go:22)	MOVQ	56(SP), CX
+	0x0300 00768 (main.go:22)	MOVQ	CX, "".s2+136(SP)
+	0x0308 00776 (main.go:22)	MOVQ	DX, "".s2+120(SP)
+	0x030d 00781 (main.go:22)	JMP	414
+	0x0312 00786 (main.go:27)	PCDATA	$0, $-2
+	0x0312 00786 (main.go:27)	MOVQ	SI, DI
+	0x0315 00789 (main.go:27)	LEAQ	go.string."2"(SB), AX
+	0x031c 00796 (main.go:27)	NOP
+	0x0320 00800 (main.go:27)	CALL	runtime.gcWriteBarrier(SB)
+	0x0325 00805 (main.go:27)	JMP	272
+	0x032a 00810 (main.go:26)	LEAQ	go.string."3"(SB), R9
+	0x0331 00817 (main.go:26)	CALL	runtime.gcWriteBarrierR9(SB)
+	0x0336 00822 (main.go:26)	JMP	228
+	0x033b 00827 (main.go:12)	PCDATA	$0, $-1
+	0x033b 00827 (main.go:12)	MOVQ	DX, "".s.len+80(SP)
+	0x0340 00832 (main.go:26)	LEAQ	type.string(SB), AX
+	0x0347 00839 (main.go:26)	MOVQ	AX, (SP)
+	0x034b 00843 (main.go:26)	MOVQ	SI, 8(SP)
+	0x0350 00848 (main.go:26)	MOVQ	DX, 16(SP)
+	0x0355 00853 (main.go:26)	MOVQ	BX, 24(SP)
+	0x035a 00858 (main.go:26)	MOVQ	R8, 32(SP)
+	0x035f 00863 (main.go:26)	NOP
+	0x0360 00864 (main.go:26)	CALL	runtime.growslice(SB)
+	0x0365 00869 (main.go:26)	MOVQ	40(SP), SI
+	0x036a 00874 (main.go:26)	MOVQ	48(SP), AX
+	0x036f 00879 (main.go:26)	MOVQ	56(SP), BX
+	0x0374 00884 (main.go:26)	LEAQ	1(AX), R8
+	0x0378 00888 (main.go:26)	MOVQ	"".s.len+80(SP), DX
+	0x037d 00893 (main.go:26)	NOP
+	0x0380 00896 (main.go:26)	JMP	187
+	0x0385 00901 (main.go:11)	PCDATA	$0, $-2
+	0x0385 00901 (main.go:11)	LEAQ	go.string."1"(SB), DX
+	0x038c 00908 (main.go:11)	CALL	runtime.gcWriteBarrierDX(SB)
+	0x0391 00913 (main.go:11)	JMP	153
+	0x0396 00918 (main.go:23)	PCDATA	$0, $-1
+	0x0396 00918 (main.go:23)	XORL	AX, AX
+	0x0398 00920 (main.go:23)	PCDATA	$1, $0
+	0x0398 00920 (main.go:23)	CALL	runtime.panicIndex(SB)
+	0x039d 00925 (main.go:27)	XORL	AX, AX
+	0x039f 00927 (main.go:27)	MOVQ	R8, CX
+	0x03a2 00930 (main.go:27)	CALL	runtime.panicIndex(SB)
+	0x03a7 00935 (main.go:27)	XCHGL	AX, AX
+	0x03a8 00936 (main.go:27)	NOP
+	0x03a8 00936 (main.go:9)	PCDATA	$1, $-1
+	0x03a8 00936 (main.go:9)	PCDATA	$0, $-2
+	0x03a8 00936 (main.go:9)	CALL	runtime.morestack_noctxt(SB)
+	0x03ad 00941 (main.go:9)	PCDATA	$0, $-1
+	0x03ad 00941 (main.go:9)	JMP	0
+	0x0000 65 48 8b 0c 25 28 00 00 00 48 8b 89 00 00 00 00  eH..%(...H......
+	0x0010 48 8d 44 24 e8 48 3b 41 10 0f 86 89 03 00 00 48  H.D$.H;A.......H
+	0x0020 81 ec 98 00 00 00 48 89 ac 24 90 00 00 00 48 8d  ......H..$....H.
+	0x0030 ac 24 90 00 00 00 48 8d 05 00 00 00 00 48 89 04  .$....H......H..
+	0x0040 24 48 c7 44 24 08 01 00 00 00 48 c7 44 24 10 02  $H.D$.....H.D$..
+	0x0050 00 00 00 e8 00 00 00 00 48 8b 7c 24 18 48 89 7c  ........H.|$.H.|
+	0x0060 24 78 48 c7 84 24 80 00 00 00 01 00 00 00 48 c7  $xH..$........H.
+	0x0070 84 24 88 00 00 00 02 00 00 00 48 c7 47 08 01 00  .$........H.G...
+	0x0080 00 00 83 3d 00 00 00 00 00 0f 85 f6 02 00 00 48  ...=...........H
+	0x0090 8d 15 00 00 00 00 48 89 17 48 8b 94 24 80 00 00  ......H..H..$...
+	0x00a0 00 48 8b 9c 24 88 00 00 00 48 8b 74 24 78 4c 8d  .H..$....H.t$xL.
+	0x00b0 42 01 49 39 d8 0f 87 80 02 00 00 48 c1 e2 04 48  B.I9.......H...H
+	0x00c0 c7 44 16 08 01 00 00 00 48 8d 3c 16 83 3d 00 00  .D......H.<..=..
+	0x00d0 00 00 00 0f 85 51 02 00 00 4c 8d 0d 00 00 00 00  .....Q...L......
+	0x00e0 4c 89 0c 16 4d 85 c0 0f 86 b0 02 00 00 48 c7 46  L...M........H.F
+	0x00f0 08 01 00 00 00 83 3d 00 00 00 00 00 0f 1f 40 00  ......=.......@.
+	0x0100 0f 85 0c 02 00 00 48 8d 05 00 00 00 00 48 89 06  ......H......H..
+	0x0110 48 89 34 24 4c 89 44 24 08 48 89 5c 24 10 66 90  H.4$L.D$.H.\$.f.
+	0x0120 e8 00 00 00 00 48 8b 44 24 18 0f 57 c0 0f 11 44  .....H.D$..W...D
+	0x0130 24 68 48 8d 0d 00 00 00 00 48 89 4c 24 68 48 89  $hH......H.L$hH.
+	0x0140 44 24 70 48 8b 05 00 00 00 00 48 8d 15 00 00 00  D$pH......H.....
+	0x0150 00 48 89 14 24 48 89 44 24 08 48 8d 44 24 68 48  .H..$H.D$.H.D$hH
+	0x0160 89 44 24 10 48 c7 44 24 18 01 00 00 00 48 c7 44  .D$.H.D$.....H.D
+	0x0170 24 20 01 00 00 00 e8 00 00 00 00 90 48 8b 84 24  $ ..........H..$
+	0x0180 80 00 00 00 48 8d 48 01 48 8b 54 24 78 48 8b 9c  ....H.H.H.T$xH..
+	0x0190 24 88 00 00 00 48 39 d9 0f 87 2f 01 00 00 48 8d  $....H9.../...H.
+	0x01a0 58 01 48 89 9c 24 80 00 00 00 48 c1 e0 04 48 c7  X.H..$....H...H.
+	0x01b0 44 02 08 01 00 00 00 48 8d 3c 02 83 3d 00 00 00  D......H.<..=...
+	0x01c0 00 00 0f 85 f4 00 00 00 48 8d 1d 00 00 00 00 48  ........H......H
+	0x01d0 89 1c 02 48 8b 7c 24 78 48 8b 8c 24 80 00 00 00  ...H.|$xH..$....
+	0x01e0 48 85 c9 0f 86 ad 01 00 00 48 c7 47 08 01 00 00  H........H.G....
+	0x01f0 00 83 3d 00 00 00 00 00 0f 85 ad 00 00 00 48 8d  ..=...........H.
+	0x0200 05 00 00 00 00 48 89 07 48 8b 44 24 78 48 8b 8c  .....H..H.D$xH..
+	0x0210 24 80 00 00 00 48 8b 94 24 88 00 00 00 48 89 04  $....H..$....H..
+	0x0220 24 48 89 4c 24 08 48 89 54 24 10 e8 00 00 00 00  $H.L$.H.T$......
+	0x0230 48 8b 44 24 18 0f 57 c0 0f 11 44 24 58 48 8d 0d  H.D$..W...D$XH..
+	0x0240 00 00 00 00 48 89 4c 24 58 48 89 44 24 60 48 8b  ....H.L$XH.D$`H.
+	0x0250 05 00 00 00 00 48 8d 0d 00 00 00 00 48 89 0c 24  .....H......H..$
+	0x0260 48 89 44 24 08 48 8d 05 00 00 00 00 48 89 44 24  H.D$.H......H.D$
+	0x0270 10 48 c7 44 24 18 06 00 00 00 48 8d 44 24 58 48  .H.D$.....H.D$XH
+	0x0280 89 44 24 20 48 c7 44 24 28 01 00 00 00 48 c7 44  .D$ H.D$(....H.D
+	0x0290 24 30 01 00 00 00 e8 00 00 00 00 48 8b ac 24 90  $0.........H..$.
+	0x02a0 00 00 00 48 81 c4 98 00 00 00 c3 48 8d 05 00 00  ...H.......H....
+	0x02b0 00 00 e8 00 00 00 00 e9 4c ff ff ff 48 8d 15 00  ........L...H...
+	0x02c0 00 00 00 e8 00 00 00 00 e9 06 ff ff ff 48 8d 35  .............H.5
+	0x02d0 00 00 00 00 48 89 34 24 48 89 54 24 08 48 89 44  ....H.4$H.T$.H.D
+	0x02e0 24 10 48 89 5c 24 18 48 89 4c 24 20 e8 00 00 00  $.H.\$.H.L$ ....
+	0x02f0 00 48 8b 54 24 28 48 8b 44 24 30 48 8b 4c 24 38  .H.T$(H.D$0H.L$8
+	0x0300 48 89 8c 24 88 00 00 00 48 89 54 24 78 e9 8c fe  H..$....H.T$x...
+	0x0310 ff ff 48 89 f7 48 8d 05 00 00 00 00 0f 1f 40 00  ..H..H........@.
+	0x0320 e8 00 00 00 00 e9 e6 fd ff ff 4c 8d 0d 00 00 00  ..........L.....
+	0x0330 00 e8 00 00 00 00 e9 a9 fd ff ff 48 89 54 24 50  ...........H.T$P
+	0x0340 48 8d 05 00 00 00 00 48 89 04 24 48 89 74 24 08  H......H..$H.t$.
+	0x0350 48 89 54 24 10 48 89 5c 24 18 4c 89 44 24 20 90  H.T$.H.\$.L.D$ .
+	0x0360 e8 00 00 00 00 48 8b 74 24 28 48 8b 44 24 30 48  .....H.t$(H.D$0H
+	0x0370 8b 5c 24 38 4c 8d 40 01 48 8b 54 24 50 0f 1f 00  .\$8L.@.H.T$P...
+	0x0380 e9 36 fd ff ff 48 8d 15 00 00 00 00 e8 00 00 00  .6...H..........
+	0x0390 00 e9 03 fd ff ff 31 c0 e8 00 00 00 00 31 c0 4c  ......1......1.L
+	0x03a0 89 c1 e8 00 00 00 00 90 e8 00 00 00 00 e9 4e fc  ..............N.
+	0x03b0 ff ff                                            ..
+	rel 3+0 t=25 type.*os.File+0
+	rel 3+0 t=25 type.[]string+0
+	rel 3+0 t=25 type.*os.File+0
+	rel 3+0 t=25 type.[]string+0
+	rel 12+4 t=17 TLS+0
+	rel 57+4 t=16 type.string+0
+	rel 84+4 t=8 runtime.makeslice+0
+	rel 132+4 t=16 runtime.writeBarrier+-1
+	rel 146+4 t=16 go.string."1"+0
+	rel 206+4 t=16 runtime.writeBarrier+-1
+	rel 220+4 t=16 go.string."3"+0
+	rel 247+4 t=16 runtime.writeBarrier+-1
+	rel 265+4 t=16 go.string."2"+0
+	rel 289+4 t=8 runtime.convTslice+0
+	rel 309+4 t=16 type.[]string+0
+	rel 326+4 t=16 os.Stdout+0
+	rel 333+4 t=16 go.itab.*os.File,io.Writer+0
+	rel 375+4 t=8 fmt.Fprintln+0
+	rel 445+4 t=16 runtime.writeBarrier+-1
+	rel 459+4 t=16 go.string."3"+0
+	rel 499+4 t=16 runtime.writeBarrier+-1
+	rel 513+4 t=16 go.string."2"+0
+	rel 556+4 t=8 runtime.convTslice+0
+	rel 576+4 t=16 type.[]string+0
+	rel 593+4 t=16 os.Stdout+0
+	rel 600+4 t=16 go.itab.*os.File,io.Writer+0
+	rel 616+4 t=16 go.string."s2=%v\n"+0
+	rel 663+4 t=8 fmt.Fprintf+0
+	rel 686+4 t=16 go.string."2"+0
+	rel 691+4 t=8 runtime.gcWriteBarrier+0
+	rel 703+4 t=16 go.string."3"+0
+	rel 708+4 t=8 runtime.gcWriteBarrierDX+0
+	rel 720+4 t=16 type.string+0
+	rel 749+4 t=8 runtime.growslice+0
+	rel 792+4 t=16 go.string."2"+0
+	rel 801+4 t=8 runtime.gcWriteBarrier+0
+	rel 813+4 t=16 go.string."3"+0
+	rel 818+4 t=8 runtime.gcWriteBarrierR9+0
+	rel 835+4 t=16 type.string+0
+	rel 865+4 t=8 runtime.growslice+0
+	rel 904+4 t=16 go.string."1"+0
+	rel 909+4 t=8 runtime.gcWriteBarrierDX+0
+	rel 921+4 t=8 runtime.panicIndex+0
+	rel 931+4 t=8 runtime.panicIndex+0
+	rel 937+4 t=8 runtime.morestack_noctxt+0
+"".addValue1 STEXT size=313 args=0x18 locals=0x48 funcid=0x0
+	0x0000 00000 (main.go:21)	TEXT	"".addValue1(SB), ABIInternal, $72-24
+	0x0000 00000 (main.go:21)	MOVQ	TLS, CX
+	0x0009 00009 (main.go:21)	PCDATA	$0, $-2
+	0x0009 00009 (main.go:21)	MOVQ	(CX)(TLS*2), CX
+	0x0010 00016 (main.go:21)	PCDATA	$0, $-1
+	0x0010 00016 (main.go:21)	CMPQ	SP, 16(CX)
+	0x0014 00020 (main.go:21)	PCDATA	$0, $-2
+	0x0014 00020 (main.go:21)	JLS	303
+	0x001a 00026 (main.go:21)	PCDATA	$0, $-1
+	0x001a 00026 (main.go:21)	SUBQ	$72, SP
+	0x001e 00030 (main.go:21)	MOVQ	BP, 64(SP)
+	0x0023 00035 (main.go:21)	LEAQ	64(SP), BP
+	0x0028 00040 (main.go:21)	FUNCDATA	$0, gclocals·dc9b0298814590ca3ffc3a889546fc8b(SB)
+	0x0028 00040 (main.go:21)	FUNCDATA	$1, gclocals·69c1753bd5f81501d95132d08af04464(SB)
+	0x0028 00040 (main.go:22)	MOVQ	"".s+80(SP), DX
+	0x002d 00045 (main.go:22)	MOVQ	8(DX), BX
+	0x0031 00049 (main.go:22)	MOVQ	(DX), SI
+	0x0034 00052 (main.go:22)	MOVQ	16(DX), R8
+	0x0038 00056 (main.go:22)	LEAQ	1(BX), R9
+	0x003c 00060 (main.go:22)	NOP
+	0x0040 00064 (main.go:22)	CMPQ	R8, R9
+	0x0043 00067 (main.go:22)	JCS	200
+	0x0049 00073 (main.go:22)	LEAQ	1(BX), R8
+	0x004d 00077 (main.go:22)	MOVQ	R8, 8(DX)
+	0x0051 00081 (main.go:22)	SHLQ	$4, BX
+	0x0055 00085 (main.go:22)	MOVQ	"".value+96(SP), R8
+	0x005a 00090 (main.go:22)	MOVQ	R8, 8(SI)(BX*1)
+	0x005f 00095 (main.go:22)	LEAQ	(SI)(BX*1), DI
+	0x0063 00099 (main.go:22)	PCDATA	$0, $-2
+	0x0063 00099 (main.go:22)	CMPL	runtime.writeBarrier(SB), $0
+	0x006a 00106 (main.go:22)	JNE	188
+	0x006c 00108 (main.go:22)	MOVQ	"".value+88(SP), R8
+	0x0071 00113 (main.go:22)	MOVQ	R8, (SI)(BX*1)
+	0x0075 00117 (main.go:23)	PCDATA	$0, $-1
+	0x0075 00117 (main.go:23)	MOVQ	(DX), DI
+	0x0078 00120 (main.go:23)	MOVQ	8(DX), CX
+	0x007c 00124 (main.go:23)	NOP
+	0x0080 00128 (main.go:23)	TESTQ	CX, CX
+	0x0083 00131 (main.go:23)	JLS	295
+	0x0089 00137 (main.go:23)	MOVQ	$1, 8(DI)
+	0x0091 00145 (main.go:23)	PCDATA	$0, $-2
+	0x0091 00145 (main.go:23)	CMPL	runtime.writeBarrier(SB), $0
+	0x0098 00152 (main.go:23)	JNE	174
+	0x009a 00154 (main.go:23)	LEAQ	go.string."2"(SB), AX
+	0x00a1 00161 (main.go:23)	MOVQ	AX, (DI)
+	0x00a4 00164 (main.go:24)	PCDATA	$0, $-1
+	0x00a4 00164 (main.go:24)	MOVQ	64(SP), BP
+	0x00a9 00169 (main.go:24)	ADDQ	$72, SP
+	0x00ad 00173 (main.go:24)	RET
+	0x00ae 00174 (main.go:23)	PCDATA	$0, $-2
+	0x00ae 00174 (main.go:23)	LEAQ	go.string."2"(SB), AX
+	0x00b5 00181 (main.go:23)	CALL	runtime.gcWriteBarrier(SB)
+	0x00ba 00186 (main.go:23)	JMP	164
+	0x00bc 00188 (main.go:22)	MOVQ	"".value+88(SP), BX
+	0x00c1 00193 (main.go:22)	CALL	runtime.gcWriteBarrierBX(SB)
+	0x00c6 00198 (main.go:22)	JMP	117
+	0x00c8 00200 (main.go:22)	PCDATA	$0, $-1
+	0x00c8 00200 (main.go:22)	LEAQ	type.string(SB), AX
+	0x00cf 00207 (main.go:22)	MOVQ	AX, (SP)
+	0x00d3 00211 (main.go:22)	MOVQ	SI, 8(SP)
+	0x00d8 00216 (main.go:22)	MOVQ	BX, 16(SP)
+	0x00dd 00221 (main.go:22)	MOVQ	R8, 24(SP)
+	0x00e2 00226 (main.go:22)	MOVQ	R9, 32(SP)
+	0x00e7 00231 (main.go:22)	PCDATA	$1, $0
+	0x00e7 00231 (main.go:22)	CALL	runtime.growslice(SB)
+	0x00ec 00236 (main.go:22)	MOVQ	40(SP), AX
+	0x00f1 00241 (main.go:22)	MOVQ	48(SP), CX
+	0x00f6 00246 (main.go:22)	MOVQ	56(SP), DX
+	0x00fb 00251 (main.go:22)	MOVQ	"".s+80(SP), DI
+	0x0100 00256 (main.go:22)	MOVQ	DX, 16(DI)
+	0x0104 00260 (main.go:22)	PCDATA	$0, $-2
+	0x0104 00260 (main.go:22)	CMPL	runtime.writeBarrier(SB), $0
+	0x010b 00267 (main.go:22)	JNE	286
+	0x010d 00269 (main.go:22)	MOVQ	AX, (DI)
+	0x0110 00272 (main.go:22)	PCDATA	$0, $-1
+	0x0110 00272 (main.go:22)	MOVQ	DI, DX
+	0x0113 00275 (main.go:22)	MOVQ	AX, SI
+	0x0116 00278 (main.go:22)	MOVQ	CX, BX
+	0x0119 00281 (main.go:22)	JMP	73
+	0x011e 00286 (main.go:22)	PCDATA	$0, $-2
+	0x011e 00286 (main.go:22)	NOP
+	0x0120 00288 (main.go:22)	CALL	runtime.gcWriteBarrier(SB)
+	0x0125 00293 (main.go:22)	JMP	272
+	0x0127 00295 (main.go:23)	PCDATA	$0, $-1
+	0x0127 00295 (main.go:23)	XORL	AX, AX
+	0x0129 00297 (main.go:23)	PCDATA	$1, $1
+	0x0129 00297 (main.go:23)	CALL	runtime.panicIndex(SB)
+	0x012e 00302 (main.go:23)	XCHGL	AX, AX
+	0x012f 00303 (main.go:23)	NOP
+	0x012f 00303 (main.go:21)	PCDATA	$1, $-1
+	0x012f 00303 (main.go:21)	PCDATA	$0, $-2
+	0x012f 00303 (main.go:21)	CALL	runtime.morestack_noctxt(SB)
+	0x0134 00308 (main.go:21)	PCDATA	$0, $-1
+	0x0134 00308 (main.go:21)	JMP	0
+	0x0000 65 48 8b 0c 25 28 00 00 00 48 8b 89 00 00 00 00  eH..%(...H......
+	0x0010 48 3b 61 10 0f 86 15 01 00 00 48 83 ec 48 48 89  H;a.......H..HH.
+	0x0020 6c 24 40 48 8d 6c 24 40 48 8b 54 24 50 48 8b 5a  l$@H.l$@H.T$PH.Z
+	0x0030 08 48 8b 32 4c 8b 42 10 4c 8d 4b 01 0f 1f 40 00  .H.2L.B.L.K...@.
+	0x0040 4d 39 c8 0f 82 7f 00 00 00 4c 8d 43 01 4c 89 42  M9.......L.C.L.B
+	0x0050 08 48 c1 e3 04 4c 8b 44 24 60 4c 89 44 1e 08 48  .H...L.D$`L.D..H
+	0x0060 8d 3c 1e 83 3d 00 00 00 00 00 75 50 4c 8b 44 24  .<..=.....uPL.D$
+	0x0070 58 4c 89 04 1e 48 8b 3a 48 8b 4a 08 0f 1f 40 00  XL...H.:H.J...@.
+	0x0080 48 85 c9 0f 86 9e 00 00 00 48 c7 47 08 01 00 00  H........H.G....
+	0x0090 00 83 3d 00 00 00 00 00 75 14 48 8d 05 00 00 00  ..=.....u.H.....
+	0x00a0 00 48 89 07 48 8b 6c 24 40 48 83 c4 48 c3 48 8d  .H..H.l$@H..H.H.
+	0x00b0 05 00 00 00 00 e8 00 00 00 00 eb e8 48 8b 5c 24  ............H.\$
+	0x00c0 58 e8 00 00 00 00 eb ad 48 8d 05 00 00 00 00 48  X.......H......H
+	0x00d0 89 04 24 48 89 74 24 08 48 89 5c 24 10 4c 89 44  ..$H.t$.H.\$.L.D
+	0x00e0 24 18 4c 89 4c 24 20 e8 00 00 00 00 48 8b 44 24  $.L.L$ .....H.D$
+	0x00f0 28 48 8b 4c 24 30 48 8b 54 24 38 48 8b 7c 24 50  (H.L$0H.T$8H.|$P
+	0x0100 48 89 57 10 83 3d 00 00 00 00 00 75 11 48 89 07  H.W..=.....u.H..
+	0x0110 48 89 fa 48 89 c6 48 89 cb e9 2b ff ff ff 66 90  H..H..H...+...f.
+	0x0120 e8 00 00 00 00 eb e9 31 c0 e8 00 00 00 00 90 e8  .......1........
+	0x0130 00 00 00 00 e9 c7 fe ff ff                       .........
+	rel 12+4 t=17 TLS+0
+	rel 101+4 t=16 runtime.writeBarrier+-1
+	rel 147+4 t=16 runtime.writeBarrier+-1
+	rel 157+4 t=16 go.string."2"+0
+	rel 177+4 t=16 go.string."2"+0
+	rel 182+4 t=8 runtime.gcWriteBarrier+0
+	rel 194+4 t=8 runtime.gcWriteBarrierBX+0
+	rel 203+4 t=16 type.string+0
+	rel 232+4 t=8 runtime.growslice+0
+	rel 262+4 t=16 runtime.writeBarrier+-1
+	rel 289+4 t=8 runtime.gcWriteBarrier+0
+	rel 298+4 t=8 runtime.panicIndex+0
+	rel 304+4 t=8 runtime.morestack_noctxt+0
+"".addValue2 STEXT size=293 args=0x40 locals=0x48 funcid=0x0
+	0x0000 00000 (main.go:25)	TEXT	"".addValue2(SB), ABIInternal, $72-64
+	0x0000 00000 (main.go:25)	MOVQ	TLS, CX
+	0x0009 00009 (main.go:25)	PCDATA	$0, $-2
+	0x0009 00009 (main.go:25)	MOVQ	(CX)(TLS*2), CX
+	0x0010 00016 (main.go:25)	PCDATA	$0, $-1
+	0x0010 00016 (main.go:25)	CMPQ	SP, 16(CX)
+	0x0014 00020 (main.go:25)	PCDATA	$0, $-2
+	0x0014 00020 (main.go:25)	JLS	281
+	0x001a 00026 (main.go:25)	PCDATA	$0, $-1
+	0x001a 00026 (main.go:25)	SUBQ	$72, SP
+	0x001e 00030 (main.go:25)	MOVQ	BP, 64(SP)
+	0x0023 00035 (main.go:25)	LEAQ	64(SP), BP
+	0x0028 00040 (main.go:25)	FUNCDATA	$0, gclocals·7578f313ff9d15b1ec5bd5c7e7ab3d8c(SB)
+	0x0028 00040 (main.go:25)	FUNCDATA	$1, gclocals·69c1753bd5f81501d95132d08af04464(SB)
+	0x0028 00040 (main.go:26)	MOVQ	"".s+88(SP), DX
+	0x002d 00045 (main.go:26)	LEAQ	1(DX), BX
+	0x0031 00049 (main.go:26)	MOVQ	"".s+96(SP), SI
+	0x0036 00054 (main.go:26)	CMPQ	SI, BX
+	0x0039 00057 (main.go:26)	JCS	200
+	0x003f 00063 (main.go:26)	MOVQ	"".s+80(SP), AX
+	0x0044 00068 (main.go:26)	SHLQ	$4, DX
+	0x0048 00072 (main.go:26)	MOVQ	"".value+112(SP), R8
+	0x004d 00077 (main.go:26)	MOVQ	R8, 8(AX)(DX*1)
+	0x0052 00082 (main.go:26)	LEAQ	(AX)(DX*1), DI
+	0x0056 00086 (main.go:26)	PCDATA	$0, $-2
+	0x0056 00086 (main.go:26)	CMPL	runtime.writeBarrier(SB), $0
+	0x005d 00093 (main.go:26)	JNE	188
+	0x005f 00095 (main.go:26)	MOVQ	"".value+104(SP), R8
+	0x0064 00100 (main.go:26)	MOVQ	R8, (AX)(DX*1)
+	0x0068 00104 (main.go:27)	PCDATA	$0, $-1
+	0x0068 00104 (main.go:27)	TESTQ	BX, BX
+	0x006b 00107 (main.go:27)	JLS	270
+	0x0071 00113 (main.go:27)	MOVQ	$1, 8(AX)
+	0x0079 00121 (main.go:27)	PCDATA	$0, $-2
+	0x0079 00121 (main.go:27)	CMPL	runtime.writeBarrier(SB), $0
+	0x0080 00128 (main.go:27)	JNE	171
+	0x0082 00130 (main.go:27)	LEAQ	go.string."2"(SB), CX
+	0x0089 00137 (main.go:27)	MOVQ	CX, (AX)
+	0x008c 00140 (main.go:28)	PCDATA	$0, $-1
+	0x008c 00140 (main.go:28)	MOVQ	AX, "".~r2+120(SP)
+	0x0091 00145 (main.go:28)	MOVQ	BX, "".~r2+128(SP)
+	0x0099 00153 (main.go:28)	MOVQ	SI, "".~r2+136(SP)
+	0x00a1 00161 (main.go:28)	MOVQ	64(SP), BP
+	0x00a6 00166 (main.go:28)	ADDQ	$72, SP
+	0x00aa 00170 (main.go:28)	RET
+	0x00ab 00171 (main.go:27)	PCDATA	$0, $-2
+	0x00ab 00171 (main.go:27)	MOVQ	AX, DI
+	0x00ae 00174 (main.go:27)	LEAQ	go.string."2"(SB), CX
+	0x00b5 00181 (main.go:27)	CALL	runtime.gcWriteBarrierCX(SB)
+	0x00ba 00186 (main.go:27)	JMP	140
+	0x00bc 00188 (main.go:26)	MOVQ	"".value+104(SP), DX
+	0x00c1 00193 (main.go:26)	CALL	runtime.gcWriteBarrierDX(SB)
+	0x00c6 00198 (main.go:26)	JMP	104
+	0x00c8 00200 (main.go:26)	PCDATA	$0, $-1
+	0x00c8 00200 (main.go:26)	LEAQ	type.string(SB), AX
+	0x00cf 00207 (main.go:26)	MOVQ	AX, (SP)
+	0x00d3 00211 (main.go:26)	MOVQ	"".s+80(SP), AX
+	0x00d8 00216 (main.go:26)	MOVQ	AX, 8(SP)
+	0x00dd 00221 (main.go:26)	MOVQ	DX, 16(SP)
+	0x00e2 00226 (main.go:26)	MOVQ	SI, 24(SP)
+	0x00e7 00231 (main.go:26)	MOVQ	BX, 32(SP)
+	0x00ec 00236 (main.go:26)	PCDATA	$1, $0
+	0x00ec 00236 (main.go:26)	CALL	runtime.growslice(SB)
+	0x00f1 00241 (main.go:26)	MOVQ	40(SP), AX
+	0x00f6 00246 (main.go:26)	MOVQ	48(SP), CX
+	0x00fb 00251 (main.go:26)	MOVQ	56(SP), SI
+	0x0100 00256 (main.go:26)	LEAQ	1(CX), BX
+	0x0104 00260 (main.go:26)	MOVQ	"".s+88(SP), DX
+	0x0109 00265 (main.go:26)	JMP	68
+	0x010e 00270 (main.go:27)	XORL	AX, AX
+	0x0110 00272 (main.go:27)	MOVQ	BX, CX
+	0x0113 00275 (main.go:27)	PCDATA	$1, $1
+	0x0113 00275 (main.go:27)	CALL	runtime.panicIndex(SB)
+	0x0118 00280 (main.go:27)	XCHGL	AX, AX
+	0x0119 00281 (main.go:27)	NOP
+	0x0119 00281 (main.go:25)	PCDATA	$1, $-1
+	0x0119 00281 (main.go:25)	PCDATA	$0, $-2
+	0x0119 00281 (main.go:25)	CALL	runtime.morestack_noctxt(SB)
+	0x011e 00286 (main.go:25)	PCDATA	$0, $-1
+	0x011e 00286 (main.go:25)	NOP
+	0x0120 00288 (main.go:25)	JMP	0
+	0x0000 65 48 8b 0c 25 28 00 00 00 48 8b 89 00 00 00 00  eH..%(...H......
+	0x0010 48 3b 61 10 0f 86 ff 00 00 00 48 83 ec 48 48 89  H;a.......H..HH.
+	0x0020 6c 24 40 48 8d 6c 24 40 48 8b 54 24 58 48 8d 5a  l$@H.l$@H.T$XH.Z
+	0x0030 01 48 8b 74 24 60 48 39 de 0f 82 89 00 00 00 48  .H.t$`H9.......H
+	0x0040 8b 44 24 50 48 c1 e2 04 4c 8b 44 24 70 4c 89 44  .D$PH...L.D$pL.D
+	0x0050 10 08 48 8d 3c 10 83 3d 00 00 00 00 00 75 5d 4c  ..H.<..=.....u]L
+	0x0060 8b 44 24 68 4c 89 04 10 48 85 db 0f 86 9d 00 00  .D$hL...H.......
+	0x0070 00 48 c7 40 08 01 00 00 00 83 3d 00 00 00 00 00  .H.@......=.....
+	0x0080 75 29 48 8d 0d 00 00 00 00 48 89 08 48 89 44 24  u)H......H..H.D$
+	0x0090 78 48 89 9c 24 80 00 00 00 48 89 b4 24 88 00 00  xH..$....H..$...
+	0x00a0 00 48 8b 6c 24 40 48 83 c4 48 c3 48 89 c7 48 8d  .H.l$@H..H.H..H.
+	0x00b0 0d 00 00 00 00 e8 00 00 00 00 eb d0 48 8b 54 24  ............H.T$
+	0x00c0 68 e8 00 00 00 00 eb a0 48 8d 05 00 00 00 00 48  h.......H......H
+	0x00d0 89 04 24 48 8b 44 24 50 48 89 44 24 08 48 89 54  ..$H.D$PH.D$.H.T
+	0x00e0 24 10 48 89 74 24 18 48 89 5c 24 20 e8 00 00 00  $.H.t$.H.\$ ....
+	0x00f0 00 48 8b 44 24 28 48 8b 4c 24 30 48 8b 74 24 38  .H.D$(H.L$0H.t$8
+	0x0100 48 8d 59 01 48 8b 54 24 58 e9 36 ff ff ff 31 c0  H.Y.H.T$X.6...1.
+	0x0110 48 89 d9 e8 00 00 00 00 90 e8 00 00 00 00 66 90  H.............f.
+	0x0120 e9 db fe ff ff                                   .....
+	rel 12+4 t=17 TLS+0
+	rel 88+4 t=16 runtime.writeBarrier+-1
+	rel 123+4 t=16 runtime.writeBarrier+-1
+	rel 133+4 t=16 go.string."2"+0
+	rel 177+4 t=16 go.string."2"+0
+	rel 182+4 t=8 runtime.gcWriteBarrierCX+0
+	rel 194+4 t=8 runtime.gcWriteBarrierDX+0
+	rel 203+4 t=16 type.string+0
+	rel 237+4 t=8 runtime.growslice+0
+	rel 276+4 t=8 runtime.panicIndex+0
+	rel 282+4 t=8 runtime.morestack_noctxt+0
+os.(*File).close STEXT dupok nosplit size=26 args=0x18 locals=0x0 funcid=0x0
+	0x0000 00000 (<autogenerated>:1)	TEXT	os.(*File).close(SB), DUPOK|NOSPLIT|ABIInternal, $0-24
+	0x0000 00000 (<autogenerated>:1)	FUNCDATA	$0, gclocals·e6397a44f8e1b6e77d0f200b4fba5269(SB)
+	0x0000 00000 (<autogenerated>:1)	FUNCDATA	$1, gclocals·69c1753bd5f81501d95132d08af04464(SB)
+	0x0000 00000 (<autogenerated>:1)	MOVQ	""..this+8(SP), AX
+	0x0005 00005 (<autogenerated>:1)	MOVQ	(AX), AX
+	0x0008 00008 (<autogenerated>:1)	MOVQ	AX, ""..this+8(SP)
+	0x000d 00013 (<autogenerated>:1)	XORPS	X0, X0
+	0x0010 00016 (<autogenerated>:1)	MOVUPS	X0, "".~r0+16(SP)
+	0x0015 00021 (<autogenerated>:1)	JMP	os.(*file).close(SB)
+	0x0000 48 8b 44 24 08 48 8b 00 48 89 44 24 08 0f 57 c0  H.D$.H..H.D$..W.
+	0x0010 0f 11 44 24 10 e9 00 00 00 00                    ..D$......
+	rel 22+4 t=8 os.(*file).close+0
+os.(*File).isdir STEXT dupok nosplit size=23 args=0x10 locals=0x0 funcid=0x0
+	0x0000 00000 (<autogenerated>:1)	TEXT	os.(*File).isdir(SB), DUPOK|NOSPLIT|ABIInternal, $0-16
+	0x0000 00000 (<autogenerated>:1)	FUNCDATA	$0, gclocals·1a65e721a2ccc325b382662e7ffee780(SB)
+	0x0000 00000 (<autogenerated>:1)	FUNCDATA	$1, gclocals·69c1753bd5f81501d95132d08af04464(SB)
+	0x0000 00000 (<autogenerated>:1)	MOVQ	""..this+8(SP), AX
+	0x0005 00005 (<autogenerated>:1)	MOVQ	(AX), AX
+	0x0008 00008 (<autogenerated>:1)	MOVQ	AX, ""..this+8(SP)
+	0x000d 00013 (<autogenerated>:1)	MOVB	$0, "".~r0+16(SP)
+	0x0012 00018 (<autogenerated>:1)	JMP	os.(*file).isdir(SB)
+	0x0000 48 8b 44 24 08 48 8b 00 48 89 44 24 08 c6 44 24  H.D$.H..H.D$..D$
+	0x0010 10 00 e9 00 00 00 00                             .......
+	rel 19+4 t=8 os.(*file).isdir+0
+go.cuinfo.packagename. SDWARFCUINFO dupok size=0
+	0x0000 6d 61 69 6e                                      main
+""..inittask SNOPTRDATA size=32
+	0x0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  ................
+	0x0010 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	rel 24+8 t=1 fmt..inittask+0
+go.info."".addValue2$abstract SDWARFABSFCN dupok size=35
+	0x0000 04 2e 61 64 64 56 61 6c 75 65 32 00 01 01 11 73  ..addValue2....s
+	0x0010 00 00 00 00 00 00 11 76 61 6c 75 65 00 00 00 00  .......value....
+	0x0020 00 00 00                                         ...
+	rel 0+0 t=24 type.[]string+0
+	rel 0+0 t=24 type.string+0
+	rel 18+4 t=31 go.info.[]string+0
+	rel 30+4 t=31 go.info.string+0
+go.info.fmt.Println$abstract SDWARFABSFCN dupok size=42
+	0x0000 04 66 6d 74 2e 50 72 69 6e 74 6c 6e 00 01 01 11  .fmt.Println....
+	0x0010 61 00 00 00 00 00 00 11 6e 00 01 00 00 00 00 11  a.......n.......
+	0x0020 65 72 72 00 01 00 00 00 00 00                    err.......
+	rel 0+0 t=24 type.[]interface {}+0
+	rel 0+0 t=24 type.error+0
+	rel 0+0 t=24 type.int+0
+	rel 19+4 t=31 go.info.[]interface {}+0
+	rel 27+4 t=31 go.info.int+0
+	rel 37+4 t=31 go.info.error+0
+go.info."".addValue1$abstract SDWARFABSFCN dupok size=35
+	0x0000 04 2e 61 64 64 56 61 6c 75 65 31 00 01 01 11 73  ..addValue1....s
+	0x0010 00 00 00 00 00 00 11 76 61 6c 75 65 00 00 00 00  .......value....
+	0x0020 00 00 00                                         ...
+	rel 0+0 t=24 type.*[]string+0
+	rel 0+0 t=24 type.string+0
+	rel 18+4 t=31 go.info.*[]string+0
+	rel 30+4 t=31 go.info.string+0
+go.info.fmt.Printf$abstract SDWARFABSFCN dupok size=54
+	0x0000 04 66 6d 74 2e 50 72 69 6e 74 66 00 01 01 11 66  .fmt.Printf....f
+	0x0010 6f 72 6d 61 74 00 00 00 00 00 00 11 61 00 00 00  ormat.......a...
+	0x0020 00 00 00 11 6e 00 01 00 00 00 00 11 65 72 72 00  ....n.......err.
+	0x0030 01 00 00 00 00 00                                ......
+	rel 0+0 t=24 type.[]interface {}+0
+	rel 0+0 t=24 type.error+0
+	rel 0+0 t=24 type.int+0
+	rel 0+0 t=24 type.string+0
+	rel 23+4 t=31 go.info.string+0
+	rel 31+4 t=31 go.info.[]interface {}+0
+	rel 39+4 t=31 go.info.int+0
+	rel 49+4 t=31 go.info.error+0
+go.string."1" SRODATA dupok size=1
+	0x0000 31                                               1
+go.string."3" SRODATA dupok size=1
+	0x0000 33                                               3
+go.string."2" SRODATA dupok size=1
+	0x0000 32                                               2
+go.string."s2=%v\n" SRODATA dupok size=6
+	0x0000 73 32 3d 25 76 0a                                s2=%v.
+runtime.memequal64·f SRODATA dupok size=8
+	0x0000 00 00 00 00 00 00 00 00                          ........
+	rel 0+8 t=1 runtime.memequal64+0
+runtime.gcbits.01 SRODATA dupok size=1
+	0x0000 01                                               .
+type..namedata.*[]string- SRODATA dupok size=12
+	0x0000 00 00 09 2a 5b 5d 73 74 72 69 6e 67              ...*[]string
+type.*[]string SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 92 22 76 84 08 08 08 36 00 00 00 00 00 00 00 00  ."v....6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*[]string-+0
+	rel 48+8 t=1 type.[]string+0
+type.[]string SRODATA dupok size=56
+	0x0000 18 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 d3 a8 f3 0a 02 08 08 17 00 00 00 00 00 00 00 00  ................
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*[]string-+0
+	rel 44+4 t=6 type.*[]string+0
+	rel 48+8 t=1 type.string+0
+runtime.nilinterequal·f SRODATA dupok size=8
+	0x0000 00 00 00 00 00 00 00 00                          ........
+	rel 0+8 t=1 runtime.nilinterequal+0
+type..namedata.*interface {}- SRODATA dupok size=16
+	0x0000 00 00 0d 2a 69 6e 74 65 72 66 61 63 65 20 7b 7d  ...*interface {}
+type.*interface {} SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 4f 0f 96 9d 08 08 08 36 00 00 00 00 00 00 00 00  O......6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*interface {}-+0
+	rel 48+8 t=1 type.interface {}+0
+runtime.gcbits.02 SRODATA dupok size=1
+	0x0000 02                                               .
+type.interface {} SRODATA dupok size=80
+	0x0000 10 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00  ................
+	0x0010 e7 57 a0 18 02 08 08 14 00 00 00 00 00 00 00 00  .W..............
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	rel 24+8 t=1 runtime.nilinterequal·f+0
+	rel 32+8 t=1 runtime.gcbits.02+0
+	rel 40+4 t=5 type..namedata.*interface {}-+0
+	rel 44+4 t=6 type.*interface {}+0
+	rel 56+8 t=1 type.interface {}+80
+type..namedata.*[]interface {}- SRODATA dupok size=18
+	0x0000 00 00 0f 2a 5b 5d 69 6e 74 65 72 66 61 63 65 20  ...*[]interface 
+	0x0010 7b 7d                                            {}
+type.*[]interface {} SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 f3 04 9a e7 08 08 08 36 00 00 00 00 00 00 00 00  .......6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*[]interface {}-+0
+	rel 48+8 t=1 type.[]interface {}+0
+type.[]interface {} SRODATA dupok size=56
+	0x0000 18 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 70 93 ea 2f 02 08 08 17 00 00 00 00 00 00 00 00  p../............
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*[]interface {}-+0
+	rel 44+4 t=6 type.*[]interface {}+0
+	rel 48+8 t=1 type.interface {}+0
+type..namedata.*[1]interface {}- SRODATA dupok size=19
+	0x0000 00 00 10 2a 5b 31 5d 69 6e 74 65 72 66 61 63 65  ...*[1]interface
+	0x0010 20 7b 7d                                          {}
+type.*[1]interface {} SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 bf 03 a8 35 08 08 08 36 00 00 00 00 00 00 00 00  ...5...6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*[1]interface {}-+0
+	rel 48+8 t=1 type.[1]interface {}+0
+type.[1]interface {} SRODATA dupok size=72
+	0x0000 10 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00  ................
+	0x0010 50 91 5b fa 02 08 08 11 00 00 00 00 00 00 00 00  P.[.............
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 01 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.nilinterequal·f+0
+	rel 32+8 t=1 runtime.gcbits.02+0
+	rel 40+4 t=5 type..namedata.*[1]interface {}-+0
+	rel 44+4 t=6 type.*[1]interface {}+0
+	rel 48+8 t=1 type.interface {}+0
+	rel 56+8 t=1 type.[]interface {}+0
+go.itab.*os.File,io.Writer SRODATA dupok size=32
+	0x0000 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0010 44 b5 f3 33 00 00 00 00 00 00 00 00 00 00 00 00  D..3............
+	rel 0+8 t=1 type.io.Writer+0
+	rel 8+8 t=1 type.*os.File+0
+	rel 24+8 t=1 os.(*File).Write+0
+type..importpath.fmt. SRODATA dupok size=6
+	0x0000 00 00 03 66 6d 74                                ...fmt
+gclocals·69c1753bd5f81501d95132d08af04464 SRODATA dupok size=8
+	0x0000 02 00 00 00 00 00 00 00                          ........
+gclocals·ac9d8af61b7ff1aaea08838d74b64836 SRODATA dupok size=10
+	0x0000 02 00 00 00 07 00 00 00 00 10                    ..........
+"".main.stkobj SRODATA static size=56
+	0x0000 03 00 00 00 00 00 00 00 c8 ff ff ff ff ff ff ff  ................
+	0x0010 00 00 00 00 00 00 00 00 d8 ff ff ff ff ff ff ff  ................
+	0x0020 00 00 00 00 00 00 00 00 e8 ff ff ff ff ff ff ff  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 16+8 t=1 type.[1]interface {}+0
+	rel 32+8 t=1 type.[1]interface {}+0
+	rel 48+8 t=1 type.[]string+0
+gclocals·dc9b0298814590ca3ffc3a889546fc8b SRODATA dupok size=10
+	0x0000 02 00 00 00 02 00 00 00 03 00                    ..........
+gclocals·7578f313ff9d15b1ec5bd5c7e7ab3d8c SRODATA dupok size=10
+	0x0000 02 00 00 00 06 00 00 00 09 00                    ..........
+gclocals·e6397a44f8e1b6e77d0f200b4fba5269 SRODATA dupok size=10
+	0x0000 02 00 00 00 03 00 00 00 01 00                    ..........
+gclocals·1a65e721a2ccc325b382662e7ffee780 SRODATA dupok size=10
+	0x0000 02 00 00 00 01 00 00 00 01 00                    ..........
