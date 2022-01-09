@@ -1,25 +1,36 @@
-
 syntax = "v1"
 
 info(
-	title: // TODO: add title
+	title: "rpc "// TODO: add title
 	desc: // TODO: add description
 	author: "GzhuFrank"
 	email: "2521012670@qq.com"
 )
-
-type request {
-	// TODO: add members here and delete this comment
-}
-
-type response {
-	// TODO: add members here and delete this comment
-}
+type (
+	expandReq {
+		Shorten string `form:"shorten"`
+	}
+	expandResp {
+		Url string `json:"url"`
+	}
+)
+type (
+	shortenReq {
+		Url string `form:"url"`
+	}
+	shortenResp {
+		Shorten string `json:"shorten"`
+	}
+)
 
 service shorturl-api {
-	@handler GetUser // TODO: set handler name and delete this comment
-	get /users/id/:userId(request) returns(response)
-
-	@handler CreateUser // TODO: set handler name and delete this comment
-	post /users/create(request)
+	@server(
+		handler: ShortenHandler
+	)
+	get /shorten(shortenReq) returns(shortenResp)
+	
+	@server(
+		handler: ExpandHandler
+	)
+	get /expand(expandReq) returns(expandResp)
 }

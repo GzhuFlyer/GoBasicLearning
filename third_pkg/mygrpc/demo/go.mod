@@ -1,14 +1,14 @@
-module mygrpc
+module demo
 
 go 1.16
 
 replace (
-	github.com/coreos/bbolt v1.3.6 => go.etcd.io/bbolt v1.3.6
-	google.golang.org/grpc => google.golang.org/grpc v1.29.1
+	github.com/coreos/bbolt v1.3.4 => go.etcd.io/bbolt v1.3.4
+	go.etcd.io/bbolt v1.3.4 => github.com/coreos/bbolt v1.3.4
 )
 
 require (
-	github.com/coreos/bbolt v1.3.6 // indirect
+	github.com/coreos/bbolt v1.3.4 // indirect
 	github.com/coreos/etcd v3.3.27+incompatible
 	github.com/coreos/go-semver v0.3.0 // indirect
 	github.com/coreos/go-systemd v0.0.0-20191104093116-d3cd4ed1dbcf // indirect
@@ -23,15 +23,15 @@ require (
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0 // indirect
 	github.com/jonboulle/clockwork v0.2.2 // indirect
-	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/prometheus/client_golang v1.11.0 // indirect
 	github.com/soheilhy/cmux v0.1.5 // indirect
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20220101234140-673ab2c3ae75 // indirect
 	github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2 // indirect
 	go.etcd.io/etcd v3.3.27+incompatible
-	go.uber.org/zap v1.19.1 // indirect
-	golang.org/x/net v0.0.0-20211216030914-fe4d6282115f
+	go.uber.org/zap v1.17.0 // indirect
+	golang.org/x/net v0.0.0-20211123203042-d83791d6bcd9
 	golang.org/x/time v0.0.0-20211116232009-f0f3c7e86c11 // indirect
-	google.golang.org/grpc v1.33.1
-	sigs.k8s.io/yaml v1.3.0 // indirect
+	google.golang.org/genproto v0.0.0-20210602131652-f16073e35f0c // indirect
+	google.golang.org/grpc v1.38.0
+	sigs.k8s.io/yaml v1.2.0 // indirect
 )

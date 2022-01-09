@@ -6,15 +6,19 @@
 package main
 
 import (
+	proto "demo/proto"
 	"flag"
 	"fmt"
 	"log"
-	proto "mygrpc/proto"
 	"strings"
 	"time"
 
+	"github.com/coredns/coredns/plugin/etcd"
+	"github.com/coreos/etcd/auth/authpb"
 	"github.com/coreos/etcd/mvcc/mvccpb"
+	//"go.etcd.io/etcd/mvcc/mvccpb"
 	"go.etcd.io/etcd/clientv3"
+	//clientv3 "go.etcd.io/etcd/client/v3"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/resolver"

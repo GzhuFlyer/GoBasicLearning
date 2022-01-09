@@ -41,30 +41,44 @@ Since the largest window of s only has one 'a', return empty string.
 
 package main
 
-import "fmt"
-
 func main() {
 
 }
-func solution(s, t string) (k string) {
-	head := []byte(s)
-	tail := []byte(s)
-	cmp := []byte(t)
-	lenc := len(cmp)
-	mapCmp := make(map[byte]int)
-	mapCmpOk := make(map[byte]int)
-	lens := len(s)
-	for i := 0; i < lenc; i++ {
-		mapCmp[cmp[i]] = 1
-	}
-	fmt.Println(head, tail, lens)
-	log := 0
 
-	for i := 0; i < lens; i++ {
-		if 1 == mapCmp[head[i]] {
-			log++
+func minWindow(S, T string) string {
+	var ret string
+	count := len(T)
+	mapT := make(map[byte]int)
+	for i := 0; i < len(T); i++ {
+		mapT[T[i]]++
+	}
+	minLen := len(S)
+	for i := 0; i < len(S); i++ {
+		if _, ok := mapT[S[i]]; ok {
+
 		}
 	}
-
-	return k
 }
+
+//func solution(s, t string) (k string) {
+//	head := []byte(s)
+//	tail := []byte(s)
+//	cmp := []byte(t)
+//	lenc := len(cmp)
+//	mapCmp := make(map[byte]int)
+//	mapCmpOk := make(map[byte]int)
+//	lens := len(s)
+//	for i := 0; i < lenc; i++ {
+//		mapCmp[cmp[i]] = 1
+//	}
+//	fmt.Println(head, tail, lens)
+//	log := 0
+//
+//	for i := 0; i < lens; i++ {
+//		if 1 == mapCmp[head[i]] {
+//			log++
+//		}
+//	}
+//
+//	return k
+//}
